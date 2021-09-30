@@ -1,0 +1,18 @@
+extends ../layouts/default
+
+block vars
+	-
+		const page = {
+			title: 'Главная'
+		};
+
+block main
+	section.first-screen(style='background-image: url("images/pattern.png")')
+		img.first-screen__logo.first-screen__logo--1(src="images/nuskin-logo.png", srcset="images/nuskin-logo@2x.png 2x", width="177", height="124", alt="")
+		img.first-screen__logo.first-screen__logo--2(src="images/nuskin-logo.png", srcset="images/nuskin-logo@2x.png 2x", width="177", height="124", alt="")
+		.container
+			.first-screen__title На каком <span>"языке"</span> говорит <br> <span>ваша кожа?</span>
+			+button('Узнать', 'first-screen__btn', '#')
+			.first-screen__image
+				img(src="images/paper.jpg", srcset="images/paper@2x.jpg 2x", width="998", height="763", alt="")
+				include ../blocks/show-block.pug

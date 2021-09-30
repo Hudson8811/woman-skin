@@ -1,0 +1,3 @@
+mixin title(title, tag, className)
+	- let tg = tag ? tag : 'h2';
+	#{tg}(class= className ? className + ' title' : 'title')!= title

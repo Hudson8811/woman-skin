@@ -1,0 +1,30 @@
+@font-face {
+  font-family: "PFRegalDisplayPro";
+  src: local("PFRegalDisplayPro-Regular"), local("PFRegalDisplayPro-Regular"),
+    url("../fonts/PFRegalDisplayPro-Regular.woff2") format("woff2"),
+    url("../fonts/PFRegalDisplayPro-Regular.woff") format("woff"),
+    url("../fonts/PFRegalDisplayPro-Regular.ttf") format("truetype"),
+    url("../fonts/PFRegalDisplayPro-Regular.eot") format("opentype");
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PFRegalDisplayPro";
+  src: local("PFRegalDisplayPro-Regular"), local("PFRegalDisplayPro-Regular"),
+  url("../fonts/PFRegalDisplayPro-Italic.woff2") format("woff2"),
+  url("../fonts/PFRegalDisplayPro-Italic.woff") format("woff"),
+  url("../fonts/PFRegalDisplayPro-Italic.ttf") format("truetype"),
+  url("../fonts/PFRegalDisplayPro-Italic.eot") format("opentype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PragmaticaLightC";
+  src: local("PragmaticaLightC"), local("PragmaticaLightC"),
+  url("../fonts/PragmaticaLightC.eot") format("opentype");
+  font-weight: 400;
+  font-display: swap;
+}

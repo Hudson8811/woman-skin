@@ -1,0 +1,43 @@
+.first-screen {
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding: 17px 0 20px;
+	position: relative;
+
+	&__title {
+		font-family: $fontSecond;
+		font-size: 58px;
+		line-height: 60px;
+		font-weight: 300;
+		text-align: center;
+
+		span {
+			font-family: $mainFont;
+			font-size: 70px;
+		}
+	}
+
+	&__image {
+		position: relative;
+		margin-top: 24px;
+	}
+
+	&__btn {
+		max-width: 230px;
+		margin: 26px auto 0;
+		font-size: 18px;
+	}
+
+	&__logo {
+		position: absolute;
+		bottom: 60px;
+
+		&--1 {
+			left: 7.6%;
+		}
+
+		&--2 {
+			right: 7%;
+		}
+	}
+}

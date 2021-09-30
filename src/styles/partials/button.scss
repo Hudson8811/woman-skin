@@ -1,0 +1,20 @@
+.button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 202px;
+	padding: 13.5px 40px;
+	border: 2px solid $pink;
+	background-color: $white;
+	border-radius: 60px;
+	font-family: $fontSecond;
+	font-size: 13px;
+	text-transform: uppercase;
+	color: $pink;
+	transition: background-color 0.3s ease, color 0.3s ease;
+
+	@include hover {
+		background-color: $pink;
+		color: $white;
+	}
+}

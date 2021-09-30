@@ -1,0 +1,78 @@
+html {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: $mainFont;
+  color: $black;
+}
+
+main {
+  flex-grow: 1;
+}
+
+a {
+  color: $black;
+  text-decoration: none;
+}
+
+svg {
+  width: auto;
+  height: auto;
+}
+
+input,
+button {
+  -webkit-appearance: none;
+}
+
+input,
+button,
+select,
+textarea {
+  font-family: $mainFont;
+  background-color: transparent;
+  border: 0;
+  border-radius: 0;
+  outline: 0;
+}
+
+input {
+  padding: 0;
+  margin: 0;
+  font-size: 18px;
+
+  @include max(md) {
+    font-size: 11px;
+  }
+
+  &::placeholder {
+    font-family: $mainFont;
+    font-size: 14px;
+    color: $mainColor;
+
+    @include max(md) {
+      font-size: 11px;
+    }
+  }
+
+  &:focus::placeholder {
+    opacity: 0;
+  }
+}
+
+.container {
+  width: 1028px;
+  padding: 0 15px;
+  margin: 0 auto;
+  max-width: 100%;
+  box-sizing: border-box;
+
+  @include max(sm) {
+    padding: 0 20px;
+  }
+}

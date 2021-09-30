@@ -1,0 +1,28 @@
+/* media */
+$media-list: (
+  "xxs": 374,
+  "xs": 560,
+  "sm": 767,
+  "md": 1080,
+  "lg": 1280,
+  "xl": 1600,
+  "x1160": 1760,
+  "xxl": 1900,
+);
+
+/* шрифты */
+$mainFont: "PFRegalDisplayPro", sans-serif;
+$fontSecond: "PragmaticaLightC", sans-serif;
+
+/* цвета */
+$mainColor: #000;
+$black: #000;
+$white: #fff;
+$gray-a5: #a5c7cf;
+$pink: #de7087;
+
+// Retina
+//---------------------------------
+
+$retina-dpi: 144dpi;
+$retina-dppx: 1.5dppx;

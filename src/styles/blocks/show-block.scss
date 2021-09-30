@@ -1,0 +1,46 @@
+.show-block {
+	max-width: 300px;
+	width: 100%;
+	padding-bottom: 30px;
+	border: 1px solid $gray-a5;
+	background-color: $white;
+	position: absolute;
+	top: 146px;
+	right: 24px;
+
+	&__image {
+		width: 81%;
+		margin: 0 auto;
+		position: relative;
+	}
+
+	&__woman {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+	&__ball {
+		position: absolute;
+		left: -15px;
+		bottom: 0;
+	}
+
+	&__title {
+		font-size: 39px;
+		line-height: 36px;
+		text-align: center;
+		color: $mainColor;
+		margin-top: 24px;
+
+		span {
+			font-family: $fontSecond;
+			font-size: 30px;
+			line-height: 36px;
+		}
+	}
+
+	&__btn {
+		margin: 20px auto 0;
+	}
+}
