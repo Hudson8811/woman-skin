@@ -114,10 +114,6 @@ $(window).on('load', function() {
 	var isLocked = true,
 			timer;
 
-	/*$('body, html').animate({
-		scrollTop: $('body').offset().top
-	}, 100);*/
-
 	timer = setTimeout(function () {
 		playAnim();
 		isLocked = false;
@@ -137,6 +133,10 @@ $(window).on('load', function() {
 			$('.section-1').removeClass('top');
 			$('.section-2').removeClass('top');
 			$('.test').removeClass('anim-balls-zoom anim-balls-text');
+			setTimeout(function () {
+				$('.section-1').addClass('anim-title');
+			}, 800);
+
 			setTimeout(function (){
 				lock = 0;
 			},1000);
@@ -147,11 +147,16 @@ $(window).on('load', function() {
 		lock = 1;
 		$('.section-1').addClass('top');
 		$('.section-2').addClass('top');
+		$('.section-1').removeClass('anim-title');
 
 		setTimeout(function (){
 			$('.test').addClass('anim-balls-zoom');
-			$('.test').addClass('anim-balls-text');
 		},800);
+
+		setTimeout(function (){
+			$('.test').addClass('anim-balls-text');
+		},1600);
+
 		setTimeout(function (){
 			$('body').removeClass('body-scroll-lock');
 			lock = 0;
