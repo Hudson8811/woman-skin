@@ -3,6 +3,8 @@
 	transform: scale(0);
 	transition: transform 1s ease-out;
 	pointer-events: none;
+	border-radius: 50%;
+	overflow: hidden;
 
 	&:not(div.test-ball) {
 		@include max(md) {
@@ -11,19 +13,23 @@
 	}
 
 	label {
+		display: block;
+		width: 100%;
+		height: 100%;
 		cursor: pointer;
 	}
 
 	img {
 		width: 100%;
 		height: 100%;
+		border-radius: 50%;
 	}
 
 	input {
 		display: none;
 
-		&:checked + p {
-			text-decoration: underline;
+		&:checked + p + img {
+			border: 2px solid;
 		}
 	}
 

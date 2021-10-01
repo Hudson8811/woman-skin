@@ -12,13 +12,9 @@
 	}
 
 	&.anim-title {
-		.test__start {
+		.test__start-wrapper {
 			opacity: 1;
 			transform: translate(-50%, -50%);
-
-			@include max(md) {
-				transform: translate(-50%, 0);
-			}
 		}
 	}
 
@@ -40,21 +36,33 @@
 	}
 
 	&__start {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		z-index: 20;
+		width: 100%;
+		height: 100vh;
+		pointer-events: none;
+	}
+
+	&__start-wrapper {
 		max-width: vw(920);
-		position: relative;
+		position: absolute;
 		top: 50%;
 		left: 50%;
-		z-index: 20;
-		pointer-events: none;
 		opacity: 0;
 		transform: translate(-50%, -20%);
 		transition: opacity 0.4s ease, transform 0.4s ease;
 
 		@include max(md) {
 			max-width: 100%;
-			top: vws(50);
+			width: 100%;
 			padding: 0 vws(45);
-			transform: translate(-50%, 0);
 		}
 
 		p {

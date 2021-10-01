@@ -9,9 +9,10 @@ block vars
 block main
 	section.test(style='background-image: url("images/test/bg.png")')
 		.test__start
-			p [Skin-translate]: переводчик с языка кожи
-			p Выберите пять особенностей вашей кожи в моменте — ведь завтра
-				|  ее желания могут измениться — и получите рекомендацию от Nu Skin.
+			.test__start-wrapper
+				p [Skin-translate]: переводчик с языка кожи
+				p Выберите пять особенностей вашей кожи в моменте — ведь завтра
+					|  ее желания могут измениться — и получите рекомендацию от Nu Skin.
 		.test-ball.test-ball--1
 			label
 				input(type='checkbox', data-option='all')
