@@ -337,6 +337,43 @@
 		}
 	}
 
+	&__restart {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: vw(18);
+		line-height: vw(21);
+		color: $pink;
+		margin: vw(20) auto 0;
+		cursor: pointer;
+
+		@include max(md) {
+			font-size: vws(18);
+			line-height: vws(21);
+			margin: vws(20) auto 0;
+		}
+
+		@include hover {
+			svg {
+				transform: rotate(360deg);
+			}
+		}
+
+		svg {
+			width: vw(20);
+			height: vw(20);
+			fill: $pink;
+			margin-right: vw(7);
+			transition: transform 0.3s ease;
+
+			@include max(md) {
+				width: vws(20);
+				height: vws(20);
+				margin-right: vws(7);
+			}
+		}
+	}
+
 	&--type-2 {
 		padding: vw(112) 0 0;
 

@@ -110,17 +110,45 @@ $(window).on('load', function() {
 		});
 	}
 
+	/* Body scroll lock by default */
+	var isLocked = true,
+			timer;
 
-	/* Bubbles animation */
-	$('.test').addClass('anim-title anim-balls-zoom');
+	$('body, html').animate({
+		scrollTop: $('body').offset().top
+	}, 100);
 
-	setTimeout(function () {
-		$('.test').removeClass('anim-title');
-	}, 3700);
+	/* If user inactive in 10sec */
+	timer = setTimeout(function () {
+		$('body').removeClass('body-scroll-lock').css({'overflow': 'overlay'});
+		playAnim();
+		isLocked = false;
+	}, 10000);
 
-	setTimeout(function () {
-		$('.test').addClass('anim-balls-text');
-	}, 3900);
+	$(window).on('wheel mousewheel', function() {
+		clearTimeout(timer);
+
+		if (isLocked) {
+			$('body').removeClass('body-scroll-lock').css({'overflow': 'overlay'});
+			playAnim();
+			isLocked = false;
+		}
+	});
+
+	function playAnim() {
+		$('body, html').animate({
+			scrollTop: $('#start').offset().top
+		}, 100);
+
+		/* Bubbles animation */
+		$('.test').addClass('anim-balls-zoom');
+
+		setTimeout(function () {
+			$('.test').addClass('anim-balls-text');
+		}, 1000);
+	}
+
+	$('.test').addClass('anim-title');
 
 	/* Test */
 	var inputs = $('.test-ball input'),
@@ -130,7 +158,27 @@ $(window).on('load', function() {
 				c: 0
 			},
 			max = 0,
-			keyVal;
+			keyVal,
+			restartBtn = $('.results__restart');
+
+	restartBtn.click(function () {
+		$('div.test-ball input').each(function () {
+			$(this).prop('checked', false);
+		});
+
+		res = {
+			a: 0,
+			b: 0,
+			c: 0
+		};
+
+		$('.results').fadeOut(300);
+		$('.test').fadeIn(300);
+
+		$('body, html').animate({
+			scrollTop: $('#start').offset().top
+		}, 100);
+	});
 
 	inputs.change(function () {
 		var inputsChecked = $('.test-ball input:checked');
@@ -155,20 +203,24 @@ $(window).on('load', function() {
 				}
 			});
 
-			$('body, html').animate({
-				scrollTop: 0
-			}, 400);
-		}
+			for (var key in res) {
+				var temp = res[key];
 
-		for (var key in res) {
-			var temp = res[key];
-
-			if (max < temp) {
-				max = temp;
-				keyVal = key;
+				if (max < temp) {
+					max = temp;
+					keyVal = key;
+				}
 			}
-		}
 
-		$('.results[data-result="' + keyVal + '"]').fadeIn(300);
+			$('body, html').animate({
+				scrollTop: $('body').offset().top
+			}, 100);
+
+			$('.results[data-result="' + keyVal + '"]').fadeIn(300);
+			$('.test').hide();
+
+			console.log(max);
+			console.log(res);
+		}
 	});
 });

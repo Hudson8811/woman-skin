@@ -42,30 +42,6 @@ textarea {
 	outline: 0;
 }
 
-input {
-	padding: 0;
-	margin: 0;
-	font-size: 18px;
-
-	@include max(md) {
-		font-size: 11px;
-	}
-
-	&::placeholder {
-		font-family: $mainFont;
-		font-size: 14px;
-		color: $mainColor;
-
-		@include max(md) {
-			font-size: 11px;
-		}
-	}
-
-	&:focus::placeholder {
-		opacity: 0;
-	}
-}
-
 .container {
 	width: 1028px;
 	padding: 0 15px;
@@ -84,6 +60,10 @@ input {
 			width: vws(730);
 		}
 	}
+}
+
+.body-scroll-lock {
+	overflow: hidden;
 }
 
 /* balls */
