@@ -110,6 +110,8 @@ $(window).on('load', function() {
 		});
 	}
 
+	window.scrollTo({ top: 0 });
+
 	$('.section-2').css({'overflow': 'hidden', 'margin-right': getScrollbarWidth() + 'px'});
 
 	function getScrollbarWidth() {
@@ -134,7 +136,7 @@ $(window).on('load', function() {
 	timer = setTimeout(function () {
 		playAnim();
 		isLocked = false;
-	}, 50000);
+	}, 10000);
 
 
 	lock = 0;
