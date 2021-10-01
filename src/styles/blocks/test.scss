@@ -12,6 +12,7 @@
 
 	&--auto-height {
 		min-height: vw(1024);
+		height: unset;
 
 		@include max(md) {
 			min-height: vws(667);
@@ -105,7 +106,7 @@
 		top: 96%;
 		left: 50%;
 		transform: translateX(-50%);
-		animation: arrow-opacity 4s linear infinite;
+		animation: arrow-move 3s linear infinite;
 
 		@include max(md) {
 			width: vws(20);

@@ -41,7 +41,7 @@
 		position: absolute;
 		top: 51%;
 		left: 50%;
-		transform: translate(-50%, -20%);
+		transform: translate(-10%, -50%);
 		opacity: 0;
 		transition: opacity 0.7s ease, transform 0.7s ease;
 
@@ -54,15 +54,6 @@
 		@include max(sm) {
 			font-size: vws(18);
 			line-height: vws(18);
-		}
-
-		span {
-			font-family: $fontSecond;
-
-			@include max(md) {
-				font-size: vws(15);
-				line-height: vws(18);
-			}
 		}
 	}
 
