@@ -114,38 +114,48 @@ $(window).on('load', function() {
 	var isLocked = true,
 			timer;
 
-	$('body, html').animate({
+	/*$('body, html').animate({
 		scrollTop: $('body').offset().top
-	}, 100);
+	}, 100);*/
 
-	/* If user inactive in 10sec */
 	timer = setTimeout(function () {
-		$('body').removeClass('body-scroll-lock').css({'overflow': 'overlay'});
 		playAnim();
 		isLocked = false;
 	}, 10000);
 
-	$(window).on('wheel mousewheel', function() {
-		clearTimeout(timer);
 
-		if (isLocked) {
-			$('body').removeClass('body-scroll-lock').css({'overflow': 'overlay'});
+	lock = 0;
+	eventDelay(window, 'mousewheel', function (down, up) {
+		var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+		if (down && lock == 0 && scrollTop == 0){
+			lock = 1;
+			clearTimeout(timer);
 			playAnim();
-			isLocked = false;
+		} else  if (up && lock == 0 && scrollTop <= 25){
+			lock = 1;
+			$('body').addClass('body-scroll-lock');
+			$('.section-1').removeClass('top');
+			$('.section-2').removeClass('top');
+			$('.test').removeClass('anim-balls-zoom anim-balls-text');
+			setTimeout(function (){
+				lock = 0;
+			},1000);
 		}
-	});
+	}, 300);
 
 	function playAnim() {
-		$('body, html').animate({
-			scrollTop: $('#start').offset().top
-		}, 100);
+		lock = 1;
+		$('.section-1').addClass('top');
+		$('.section-2').addClass('top');
 
-		/* Bubbles animation */
-		$('.test').addClass('anim-balls-zoom');
-
-		setTimeout(function () {
+		setTimeout(function (){
+			$('.test').addClass('anim-balls-zoom');
 			$('.test').addClass('anim-balls-text');
-		}, 1000);
+		},800);
+		setTimeout(function (){
+			$('body').removeClass('body-scroll-lock');
+			lock = 0;
+		},1000);
 	}
 
 	$('.test').addClass('anim-title');
@@ -224,3 +234,61 @@ $(window).on('load', function() {
 		}
 	});
 });
+
+
+function normalizeWheelSpeed(event) {
+	var normalized;
+	if (event.wheelDelta) {
+		normalized = (event.wheelDelta % 120 - 0) == -0 ? event.wheelDelta / 120 : event.wheelDelta / 12;
+	} else {
+		var rawAmmount = event.deltaY ? event.deltaY : event.detail;
+		normalized = -(rawAmmount % 3 ? rawAmmount * 10 : rawAmmount / 3);
+	}
+	return normalized;
+}
+
+function eventDelay(el, eventName, callback, delay) {
+	var currentTime = (new Date()).getTime();
+	var container = typeof el == 'object' ? $(el) : $(el);
+	delay = delay || 1000;
+	eventName = eventName || 'mousewheel';
+	var block = false;
+	if (eventName === 'mousewheel') {
+		var indicator = new WheelIndicator({
+			elem: document.querySelector('body'),
+			preventMouse: false,
+			callback: function(e){
+				var nowTime = (new Date()).getTime();
+				var diff = Math.abs((nowTime - currentTime) / delay);
+				if (diff < 1) {
+				} else {
+					var up = e.direction == 'up';
+					var down = e.direction == 'down';
+					callback(down, up);
+					currentTime = nowTime;
+				}
+			}
+		});
+	} else {
+		container.on(eventName, function (event) {
+			var nowTime = (new Date()).getTime();
+			var diff = Math.abs((nowTime - currentTime) / delay);
+			if (diff < 1.3) return;
+			currentTime = nowTime;
+			if (eventName == 'mousewheel') {
+				var normalized = normalizeWheelSpeed(event)
+				var down = normalized > 0;
+				var up = normalized < 0;
+				callback(down, up);
+			} else if (eventName == 'keyup') {
+				var normalized = event.keyCode
+				var down = normalized == 40 || normalized == 39;
+				var up = normalized == 38 || normalized == 37;
+				callback(down, up);
+			} else {
+				callback();
+			}
+		});
+	}
+
+}
