@@ -1,4 +1,8 @@
 $(window).on('load', function() {
+	setTimeout(function () {
+		window.scrollTo({ top: 0 });
+	}, 100);
+
 	/* Share */
 	window.auth = function (data) {
 		$.ajax({
@@ -109,8 +113,6 @@ $(window).on('load', function() {
 			}
 		});
 	}
-
-	window.scrollTo({ top: 0 });
 
 	$('.section-2').css({'overflow': 'hidden', 'margin-right': getScrollbarWidth() + 'px'});
 
