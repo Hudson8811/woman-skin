@@ -48,7 +48,7 @@
 		pointer-events: none;
 		opacity: 0;
 		transform: translate(-50%, -20%);
-		transition: opacity 0.7s ease 2.2s, transform 0.7s ease 2.2s;
+		transition: opacity 0.4s ease, transform 0.4s ease;
 
 		@include max(md) {
 			max-width: 100%;

@@ -116,11 +116,11 @@ $(window).on('load', function() {
 
 	setTimeout(function () {
 		$('.test').removeClass('anim-title');
-	}, 5000);
+	}, 2700);
 
 	setTimeout(function () {
 		$('.test').addClass('anim-balls-text');
-	}, 6000);
+	}, 2900);
 
 	/* Test */
 	var inputs = $('.test-ball input'),
