@@ -110,6 +110,23 @@ $(window).on('load', function() {
 		});
 	}
 
+	$('body').css({'overflow': 'hidden', 'margin-right': getScrollbarWidth() + 'px'});
+
+	function getScrollbarWidth() {
+		var block = $('<div>').css({'height':'50px','width':'50px'});
+		var indicator = $('<div>').css({'height':'200px'});
+
+		$('body').append(block.append(indicator));
+
+		var w1 = $('div', block).innerWidth();
+		block.css('overflow-y', 'scroll');
+
+		var w2 = $('div', block).innerWidth();
+		$(block).remove();
+
+		return (w1 - w2);
+	}
+
 	/* Body scroll lock by default */
 	var isLocked = true,
 			timer;
