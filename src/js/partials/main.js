@@ -1,7 +1,7 @@
 $(window).on('load', function() {
-	setTimeout(function () {
-		window.scrollTo({ top: 0 });
-	}, 100);
+	history.scrollRestoration = "manual"
+
+	window.scrollTo({ top: 0 });
 
 	/* Share */
 	window.auth = function (data) {
