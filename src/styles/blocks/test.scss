@@ -10,6 +10,10 @@
 		overflow: hidden;
 	}
 
+	&:not(.anim-balls-zoom) {
+		margin-right:23px;
+	}
+
 	&--auto-height {
 		min-height: vw(1024);
 		height: unset;
