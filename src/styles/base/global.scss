@@ -1,78 +1,205 @@
 html {
-  font-size: 14px;
-  font-weight: 400;
+	font-size: 14px;
+	font-weight: 400;
 }
 
 body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  font-family: $mainFont;
-  color: $black;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	font-family: $mainFont;
+	color: $black;
 }
 
 main {
-  flex-grow: 1;
+	flex-grow: 1;
+	overflow: hidden;
 }
 
 a {
-  color: $black;
-  text-decoration: none;
+	color: $black;
+	text-decoration: none;
 }
 
 svg {
-  width: auto;
-  height: auto;
+	width: auto;
+	height: auto;
 }
 
 input,
 button {
-  -webkit-appearance: none;
+	-webkit-appearance: none;
 }
 
 input,
 button,
 select,
 textarea {
-  font-family: $mainFont;
-  background-color: transparent;
-  border: 0;
-  border-radius: 0;
-  outline: 0;
+	font-family: $mainFont;
+	background-color: transparent;
+	border: 0;
+	border-radius: 0;
+	outline: 0;
 }
 
 input {
-  padding: 0;
-  margin: 0;
-  font-size: 18px;
+	padding: 0;
+	margin: 0;
+	font-size: 18px;
 
-  @include max(md) {
-    font-size: 11px;
-  }
+	@include max(md) {
+		font-size: 11px;
+	}
 
-  &::placeholder {
-    font-family: $mainFont;
-    font-size: 14px;
-    color: $mainColor;
+	&::placeholder {
+		font-family: $mainFont;
+		font-size: 14px;
+		color: $mainColor;
 
-    @include max(md) {
-      font-size: 11px;
-    }
-  }
+		@include max(md) {
+			font-size: 11px;
+		}
+	}
 
-  &:focus::placeholder {
-    opacity: 0;
-  }
+	&:focus::placeholder {
+		opacity: 0;
+	}
 }
 
 .container {
-  width: 1028px;
-  padding: 0 15px;
-  margin: 0 auto;
-  max-width: 100%;
-  box-sizing: border-box;
+	width: 1028px;
+	padding: 0 15px;
+	margin: 0 auto;
+	max-width: 100%;
+	box-sizing: border-box;
 
-  @include max(sm) {
-    padding: 0 20px;
-  }
+	@include max(sm) {
+		padding: 0 20px;
+	}
+
+	&--small {
+		width: vw(730);
+
+		@include max(md) {
+			width: vws(730);
+		}
+	}
+}
+
+/* balls */
+.ball {
+	position: absolute;
+	z-index: -1;
+
+	@include max(md) {
+		display: none;
+	}
+
+	&--mobile {
+		display: none;
+
+		@include max(md) {
+			display: block;
+		}
+	}
+
+	&--1 {
+		width: vw(252);
+		height: vw(252);
+		top: vw(50);
+		left: vw(94);
+
+		@include max(md) {
+			display: block;
+			width: vws(66);
+			height: vws(66);
+			top: vws(255);
+			left: unset;
+			right: vws(20);
+			z-index: 1;
+		}
+	}
+
+	&--2 {
+		width: vw(352);
+		height: vw(531);
+		top: 0;
+		right: 0;
+	}
+
+	&--3 {
+		width: vw(128);
+		height: vw(128);
+		top: 24.5%;
+		left: 14%;
+		z-index: 1;
+	}
+
+	&--4 {
+		width: vw(264);
+		height: vw(342);
+		top: 47.4%;
+		left: 0;
+	}
+
+	&--5 {
+		width: vw(223);
+		height: vw(223);
+		top: 47.4%;
+		right: vw(89);
+	}
+
+	&--6 {
+		width: vw(219);
+		height: vw(219);
+		bottom: 8.7%;
+		left: vw(50);
+
+		@include max(md) {
+			display: block;
+			width: vws(104);
+			height: vws(104);
+			bottom: vws(565);
+			left: vws(-30);
+		}
+	}
+
+	&--7 {
+		width: vw(110);
+		height: vw(110);
+		bottom: 11.4%;
+		right: 28.7%;
+
+		@include max(md) {
+			width: vws(60);
+			height: vws(60);
+			right: unset;
+			bottom: unset;
+			top: vws(-15);
+			left: 23%;
+		}
+	}
+
+	&--8 {
+		width: vw(668);
+		height: vw(233);
+		bottom: vw(-130);
+		left: 0;
+	}
+
+	&--9 {
+		width: vw(656);
+		height: vw(656);
+		right: vw(-170);
+		bottom: vw(-300);
+		z-index: -2;
+
+		@include max(md) {
+			display: block;
+			width: vws(315);
+			height: vws(315);
+			bottom: vws(340);
+			right: vws(-207);
+		}
+	}
 }

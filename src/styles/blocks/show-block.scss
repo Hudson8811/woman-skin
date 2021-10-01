@@ -1,8 +1,8 @@
 .show-block {
 	max-width: 300px;
 	width: 100%;
-	padding-bottom: 30px;
-	border: 1px solid $gray-a5;
+	padding-bottom: vwx(30);
+	border: vwx(1) solid $gray-a5;
 	background-color: $white;
 	position: absolute;
 	top: 146px;
@@ -22,7 +22,7 @@
 
 	&__ball {
 		position: absolute;
-		left: -15px;
+		left: vwx(-15);
 		bottom: 0;
 	}
 

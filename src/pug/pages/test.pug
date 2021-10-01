@@ -1,0 +1,287 @@
+extends ../layouts/default
+
+block vars
+	-
+		const page = {
+			title: 'Тест'
+		};
+
+block main
+	section.test(style='background-image: url("images/test/bg.png")')
+		.test__start
+			p [Skin-translate]: переводчик с языка кожи
+			p Выберите пять особенностей вашей кожи в моменте — ведь завтра
+				|  ее желания могут измениться — и получите рекомендацию от Nu Skin.
+		.test-ball.test-ball--1
+			label
+				input(type='checkbox', data-option='all')
+				p Темные круги <br> <span>под глазами</span>
+				img(src="images/test/red.png", srcset="images/test/red@2x.png 2x", alt="")
+		.test-ball.test-ball--2
+			label
+				input(type='checkbox', data-option='b')
+				p Пигментные <br> <span>пятна</span>
+				img(src="images/test/blue.png", srcset="images/test/blue@2x.png 2x", alt="")
+		.test-ball.test-ball--3
+			label
+				input(type='checkbox', data-option='b')
+				p «Сердитые» <br> <span>заломы</span>
+				img(src="images/test/gray.png", srcset="images/test/gray@2x.png 2x", alt="")
+		.test-ball.test-ball--4
+			label
+				input(type='checkbox', data-option='c')
+				p Шелушения
+				img(src="images/test/blue.png", srcset="images/test/blue@2x.png 2x", alt="")
+		.test-ball.test-ball--5
+			label
+				input(type='checkbox', data-option='b')
+				p Ранние <br> <span>морщинки</span>
+				img(src="images/test/gray.png", srcset="images/test/gray@2x.png 2x", alt="")
+		.test-ball.test-ball--6
+			label
+				input(type='checkbox', data-option='b')
+				p «Гусиные лапки»
+				img(src="images/test/red.png", srcset="images/test/red@2x.png 2x", alt="")
+		.test-ball.test-ball--7
+			label
+				input(type='checkbox', data-option='c')
+				p Покраснения
+				img(src="images/test/gray.png", srcset="images/test/gray@2x.png 2x", alt="")
+		.test-ball.test-ball--8
+			label
+				input(type='checkbox', data-option='a')
+				p Неэстетичный <br> <span>блеск</span>
+				img(src="images/test/blue.png", srcset="images/test/blue@2x.png 2x", alt="")
+		.test-ball.test-ball--9
+			label
+				input(type='checkbox', data-option='a')
+				p Забитые <br> <span>поры</span>
+				img(src="images/test/gray.png", srcset="images/test/gray@2x.png 2x", alt="")
+		.test-ball.test-ball--10
+			label
+				input(type='checkbox', data-option='a')
+				p Неровная <br> <span>текстура</span>
+				img(src="images/test/red.png", srcset="images/test/red@2x.png 2x", alt="")
+		.test-ball.test-ball--11
+			label
+				input(type='checkbox', data-option='all')
+				p Тусклость
+				img(src="images/test/red.png", srcset="images/test/red@2x.png 2x", alt="")
+		.test-ball.test-ball--12
+			label
+				input(type='checkbox', data-option='c')
+				p Чувство <br> <span>стянутости</span>
+				img(src="images/test/gray.png", srcset="images/test/gray@2x.png 2x", alt="")
+		.test-ball.test-ball--13
+			label
+				input(type='checkbox', data-option='c')
+				p Неровный <br> <span>тон</span>
+				img(src="images/test/blue.png", srcset="images/test/blue@2x.png 2x", alt="")
+		.test-ball.test-ball--14
+			label
+				input(type='checkbox', data-option='a')
+				p Линии <br> <span>обезвоженности</span>
+				img(src="images/test/red.png", srcset="images/test/red@2x.png 2x", alt="")
+		img.test-ball.test-ball--15(src="images/test/gray.png", srcset="images/test/gray@2x.png 2x", alt="")
+		img.test-ball.test-ball--16(src="images/test/red.png", srcset="images/test/red@2x.png 2x", alt="")
+		img.test-ball.test-ball--17(src="images/test/red.png", srcset="images/test/red@2x.png 2x", alt="")
+		img.test-ball.test-ball--18(src="images/test/blue.png", srcset="images/test/blue@2x.png 2x", alt="")
+		img.test-ball.test-ball--19(src="images/test/blue.png", srcset="images/test/blue@2x.png 2x", alt="")
+		img.test-ball.test-ball--20(src="images/test/gray.png", srcset="images/test/gray@2x.png 2x", alt="")
+
+	section.results(data-result='a')
+		img.ball.ball--1(src="images/results/ball-1.png", srcset="images/results/ball-1@2x.png 2x", alt="")
+		img.ball.ball--2(src="images/results/ball-2.png", srcset="images/results/ball-2@2x.png 2x", alt="")
+		img.ball.ball--3(src="images/results/ball-3.png", srcset="images/results/ball-3@2x.png 2x", alt="")
+		img.ball.ball--4(src="images/results/ball-4.png", srcset="images/results/ball-4@2x.png 2x", alt="")
+		img.ball.ball--5(src="images/results/ball-5.png", srcset="images/results/ball-5@2x.png 2x", alt="")
+		img.ball.ball--6(src="images/results/ball-6.png", srcset="images/results/ball-6@2x.png 2x", alt="")
+		img.ball.ball--7(src="images/results/ball-7.png", srcset="images/results/ball-7@2x.png 2x", alt="")
+		img.ball.ball--8(src="images/results/ball-8.png", srcset="images/results/ball-8@2x.png 2x", alt="")
+		img.ball.ball--9(src="images/results/ball-9.png", srcset="images/results/ball-9@2x.png 2x", alt="")
+		.container.container--small.results__container
+			.results__top
+				p Больше вариантов А
+				p Что-то замедляет обновление вашей кожи и провоцирует закупорку пор.
+					|  В Т-зоне появляются комедоны, микробиом эпидермиса нарушен и не справляется со своей
+					|  основной функцией — защитой от размножения условно патогенных бактерий и внешних микроповреждений.
+			.results__title Дополните уход отшелушивающими средствами и откажитесь от мощных очищающих
+				|  продуктов для умывания. Жирная и комбинированная кожа нуждается в интенсивном
+				|  очищении без пересушивания — это правило №1.
+			.results__block.results__block--1
+				.results__left
+					.results__title Отшелушивание
+					.results__text Пусть отшелушивание будет мягким, без абразивных частиц и трения. Так действует система <a href="#" target="_blank">age LOC Boost</a>.
+						|  Экстракт пальчикового лайма в сыворотке помогает коже обновляться, а само устройство способствует
+						|  сокращению размера пор.
+				.results__right
+					img.ball.ball--mobile.ball--7(src="images/results/ball-7.png", srcset="images/results/ball-7@2x.png 2x", alt="")
+					img.results__image(src="images/results/1.png", srcset="images/results/1@2x.png 2x", width="163", height="163", alt="")
+					p.caption Комплекс ageLOC Boost
+			.results__block.results__block--reverse.results__block--2
+				.results__left
+					.results__title Для ритуала деликатного очищения подойдет гель <a href="#" target="_blank">Nutricentials To Be Clear от Nu Skin.</a>
+					.results__text В ладонях он превращается в нежную пенку и эффективно удаляет загрязнения, блокирующие поры,
+						|  не сушит кожу, способствует усилению ее защитных свойств. Формула геля обогащена комплексом растительных
+						|  адаптогенов — экстрактов, помогающих коже противостоять стрессу. Адаптогены также стали ключевой <br>
+						|  составляющей формулы отшелушивающего тоника <a href="#" target="_blank">Nutricentials Here You Glow</a> наравне с комплексом кислот AHA,
+						|  BHA и PHA. В паре эти средства возвращают коже чистоту, свежесть и увлажненность, сокращают высыпания.
+				.results__right
+					img.results__image(src="images/results/2.png", srcset="images/results/2@2x.png 2x", width="153", height="261", alt="")
+					p.caption Гель Nutricentials <br> To Be Clear
+			.results__block.results__block--3
+				.results__text Повышенную выработку себума тоже возможно нормализовать без пересушивания
+					|  В увлажняющем и удивительно комфортном креме с гелевой текстурой Nutricentials Thirst Fix об этом позаботится экстракт
+					|  лекарственного растения кошачий ус.
+			+button('Смотреть на сайте', 'results__btn', '#')
+		footer.footer
+			.footer__left HSM PRODUCTION
+			.footer__right
+				span ПОДЕЛИТЬСЯ
+				.footer__socials(data-title="Заголовок share" data-image="" data-url="")
+					a(href='javascript:;', class='vk', target='_blank', data-id='share_vk', data-mode='nohash')
+						+icon('vk')
+					a(href='javascript:;', class='fb', target='_blank', data-id='share_fb', data-mode='nohash')
+						+icon('fb')
+					a(href='javascript:;', class='tw', target='_blank', data-id='share_tw', data-mode='nohash')
+						+icon('tw')
+					a(href='javascript:;', class='ok', target='_blank', data-id='share_ok', data-mode='nohash')
+						+icon('ok')
+
+
+	section.results.results--type-2(data-result='b')
+		img.ball.ball--1(src="images/results/ball-1.png", srcset="images/results/ball-1@2x.png 2x", alt="")
+		img.ball.ball--2(src="images/results/ball-2.png", srcset="images/results/ball-2@2x.png 2x", alt="")
+		img.ball.ball--3(src="images/results/ball-3.png", srcset="images/results/ball-3@2x.png 2x", alt="")
+		img.ball.ball--4(src="images/results/ball-4.png", srcset="images/results/ball-4@2x.png 2x", alt="")
+		img.ball.ball--5(src="images/results/ball-5.png", srcset="images/results/ball-5@2x.png 2x", alt="")
+		img.ball.ball--6(src="images/results/ball-6.png", srcset="images/results/ball-6@2x.png 2x", alt="")
+		img.ball.ball--7(src="images/results/ball-7.png", srcset="images/results/ball-7@2x.png 2x", alt="")
+		img.ball.ball--8(src="images/results/ball-8.png", srcset="images/results/ball-8@2x.png 2x", alt="")
+		img.ball.ball--9(src="images/results/ball-9.png", srcset="images/results/ball-9@2x.png 2x", alt="")
+		.container.container--small.results__container
+			.results__top
+				p Больше вариантов Б
+				p Кожа отвечает на оксидативный стресс, агрессию внешней среды и ультрафиолет единственным известным
+					|  ей способом — преждевременным старением. Замедлите течение времени полноценным правильным питанием,
+					|  прогулками на свежем воздухе. А еще ваша кожа будет вам безмерно благодарна за средства ухода с
+					|  увлажняющими, осветляющими, питательными и антиоксидантными компонентами.
+			.results__title Уже существующие пигментные пятна легко поддаются коррекции с комплексным уходом <a href="#" target="_blank">ageLOC Boost.</a>
+			.results__block.results__block--1
+				.results__left
+					.results__text Сыворотка содержит экстракт морского нарцисса, витамин С и ниацинамид, снискавшие славу одних
+						|  из лучших косметических активов против пигментных пятен любой природы, в том числе возрастных и вызванных
+						|  вредными внешними факторами. Упомянем два важных антивозрастных компонента состава: уникальная клинически
+						|  проверенная композиция ageLOC и экстракт арбузной корки, богатый аминокислотой цитруллином, направлены на
+						|  уменьшение видимых признаков преждевременного старения. Микротоки, в свою очередь, способствуют осветлению
+						|  кожи и уменьшению пигментации.
+				.results__right
+					img.ball.ball--mobile.ball--7(src="images/results/ball-7.png", srcset="images/results/ball-7@2x.png 2x", alt="")
+					img.results__image(src="images/results/3.png", srcset="images/results/3@2x.png 2x", alt="")
+					p.caption Комплекс ageLOC Boost
+
+			.results__title.results__title--pl Антивозрастной уход доведут до совершенства средства гаммы Nutricentials.
+			.results__block.results__block--reverse.results__block--2
+				.results__left
+					.results__text Крем для лица <a href="#" target="_blank">Nutricentials Dew All Day</a> повысит устойчивость кожи к внешним факторам старения,
+						|  поддержит оптимальный водный баланс до 24 часов и не забьет при этом поры, поскольку составы всех продуктов
+						|  гаммы <a href="#" target="_blank">Nutricentials</a> некомедогенны. В условиях окислительного стресса, вызванного постоянным воздействием
+						|  ультрафиолета, инфракрасного излучения и, на минуточку, синего света наших обожаемых смартфонов, защиту от
+						| свободных радикалов кислорода обеспечит легкий и быстро впитывающийся лосьон <a href="#" target="_blank">Nutricentials Day Dream</a> с
+						|  антиоксидантами — карнозином и экстрактом корня имбиря. Солнцезащитный показатель средства (SPF 30) предупреждает
+						|  появление пигментных пятен.
+				.results__right
+					img.results__image(src="images/results/4.png", srcset="images/results/4@2x.png 2x", alt="")
+					p.caption Крем Nutricentials <br> Dew All Day
+			.results__block.results__block--3
+				.results__left
+					.results__title «Симптомы» усталости и возрастных изменений вокруг глаз требуют особого, системного подхода.
+					.results__text Например, с комплексом <a href="#" target="_blank">ageLOC LumiSpa.</a> Массажное устройство в сочетании с мягкой силиконовой
+						|  насадкой «Акцент» и кремом для кожи вокруг глаз IdealEyes разглаживает кожу, уменьшает признаки усталости
+						|  и, между прочим, заметно корректирует темные круги и припухлости.
+			+button('Смотреть на сайте', 'results__btn', '#')
+		footer.footer.footer--gray
+			.footer__left HSM PRODUCTION
+			.footer__right
+				span ПОДЕЛИТЬСЯ
+				.footer__socials(data-title="Заголовок share" data-image="" data-url="")
+					a(href='javascript:;', class='vk', target='_blank', data-id='share_vk', data-mode='nohash')
+						+icon('vk')
+					a(href='javascript:;', class='fb', target='_blank', data-id='share_fb', data-mode='nohash')
+						+icon('fb')
+					a(href='javascript:;', class='tw', target='_blank', data-id='share_tw', data-mode='nohash')
+						+icon('tw')
+					a(href='javascript:;', class='ok', target='_blank', data-id='share_ok', data-mode='nohash')
+						+icon('ok')
+
+
+	section.results.results--type-3(data-result='c')
+		img.ball.ball--1(src="images/results/ball-1.png", srcset="images/results/ball-1@2x.png 2x", alt="")
+		img.ball.ball--2(src="images/results/ball-2.png", srcset="images/results/ball-2@2x.png 2x", alt="")
+		img.ball.ball--3(src="images/results/ball-3.png", srcset="images/results/ball-3@2x.png 2x", alt="")
+		img.ball.ball--4(src="images/results/ball-4.png", srcset="images/results/ball-4@2x.png 2x", alt="")
+		img.ball.ball--5(src="images/results/ball-5.png", srcset="images/results/ball-5@2x.png 2x", alt="")
+		img.ball.ball--6(src="images/results/ball-6.png", srcset="images/results/ball-6@2x.png 2x", alt="")
+		img.ball.ball--7(src="images/results/ball-7.png", srcset="images/results/ball-7@2x.png 2x", alt="")
+		img.ball.ball--8(src="images/results/ball-8.png", srcset="images/results/ball-8@2x.png 2x", alt="")
+		img.ball.ball--9(src="images/results/ball-9.png", srcset="images/results/ball-9@2x.png 2x", alt="")
+		.container.container--small.results__container
+			.results__top
+				p Больше вариантов В
+				p Даже если еще недавно ваша кожа была нормальной, сейчас она скорее сухая и чувствительная, о чем
+					|  неустанно сигнализирует шершавостью, неравномерным цветом с отчетливыми покраснениями и дискомфортом
+					|  после умывания. Питательный уход восполнит гидролипидный барьер на поверхности кожи, ответственный за ее
+					|  способность удерживать живительную влагу. И совсем не помешает экстремальное увлажнение.
+			.results__block.results__block--1
+				.results__left
+					.results__title Увлажнение
+					.results__text За мощным увлажнением рекомендуем обратиться к комплексу <a href="#" target="_blank">ageLOC Boost.</a> Микротоки сделают кожу более
+						|  структурной, наполненной влагой. Их эффект усилит сыворотка-активатор с комплексом растительных экстрактов
+						|  и двумя формами гиалуроновой кислоты. Одна из них — ацетилированный гиалуронат натрия, получивший заслуженное
+						|  признание в медицинской и косметологической среде.
+				.results__right
+					img.ball.ball--mobile.ball--7(src="images/results/ball-7.png", srcset="images/results/ball-7@2x.png 2x", alt="")
+					img.results__image(src="images/results/5.png", srcset="images/results/5@2x.png 2x", alt="")
+					p.caption Комплекс ageLOC Boost
+
+			.results__block.results__block--2
+				.results__left
+					.results__title Но на этом рано ставить точку, поскольку увлажнения и питания не бывает слишком много. Вам подойдут как
+						|  минимум три средства ухода из гаммы Nutricentials от <a href="#" target="_blank">Nu Skin.</a>
+					ol.results__list
+						li
+							span Шаг первый — очищение <a href="#" target="_blank">кремом-лосьоном HydraClean.</a> Действует деликатно,
+								|  эффективно успокаивает за счет экстрактов водорослей, полыни и солодки, восстанавливает
+								|  стрессоустойчивость кожи и, что очень важно при сухости, поддерживает целостность влагоудерживающей гидролипидной мантии.
+						li
+							span Шаг второй — тонизирование. Тоник <a href="#" target="_blank">In Balance</a> способствует поддержанию
+								|  естественного pH кожи и мгновенно увлажняет.
+						li
+							span Шаг третий — интенсивное и пролонгированное увлажнение на основе крема Moisturize Me. Несмотря на роскошную густую текстуру,
+								|  крем не оставляет жирного финиша и ощущения липкости — только свежесть и здоровое сияние кожи.
+
+			.results__block.results__block--3
+				.results__left
+					.results__title А в те дни, когда кожа сама не знает, что ей сейчас нужно — больше увлажнения или больше
+						|  питания, — помогите ей адаптироваться к изменению температурного режима.
+					.results__text Так, легкая сыворотка <a href="#" target="_blank">Nutricentials Celltrex Always Right</a> регулирует уровень увлажнения,
+						|  притягивая или отводя влагу в зависимости от того, что вам нужно именно сейчас. Комфорт в течение дня,
+						|  восстановление защитных механизмов кожи ночью — эта сыворотка станет настоящим подарком для
+						|  пересушенной реактивной кожи.
+				.results__right
+					img.results__image(src="images/results/6.png", srcset="images/results/6@2x.png 2x", alt="")
+					p.caption Nutricentials Celltrex <br> Always Right
+			+button('Смотреть на сайте', 'results__btn', '#')
+		footer.footer.footer--pink
+			.footer__left HSM PRODUCTION
+			.footer__right
+				span ПОДЕЛИТЬСЯ
+				.footer__socials(data-title="Заголовок share" data-image="" data-url="")
+					a(href='javascript:;', class='vk', target='_blank', data-id='share_vk', data-mode='nohash')
+						+icon('vk')
+					a(href='javascript:;', class='fb', target='_blank', data-id='share_fb', data-mode='nohash')
+						+icon('fb')
+					a(href='javascript:;', class='tw', target='_blank', data-id='share_tw', data-mode='nohash')
+						+icon('tw')
+					a(href='javascript:;', class='ok', target='_blank', data-id='share_ok', data-mode='nohash')
+						+icon('ok')

@@ -8,7 +8,11 @@
 
 /* partials */
 @import "partials/button";
+@import "partials/footer";
 
 /* blocks */
-@import "blocks/first-screen";
 @import "blocks/show-block";
+@import "blocks/first-screen";
+@import "blocks/results";
+@import "blocks/test";
+@import "blocks/test-ball";

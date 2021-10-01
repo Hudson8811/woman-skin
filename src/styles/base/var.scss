@@ -5,7 +5,7 @@ $media-list: (
   "sm": 767,
   "md": 1080,
   "lg": 1280,
-  "xl": 1600,
+  "xl": 1599,
   "x1160": 1760,
   "xxl": 1900,
 );
@@ -13,6 +13,7 @@ $media-list: (
 /* шрифты */
 $mainFont: "PFRegalDisplayPro", sans-serif;
 $fontSecond: "PragmaticaLightC", sans-serif;
+$fontCentury: "CenturyGothic", sans-serif;
 
 /* цвета */
 $mainColor: #000;
@@ -20,6 +21,8 @@ $black: #000;
 $white: #fff;
 $gray-a5: #a5c7cf;
 $pink: #de7087;
+$light-purple: #c792be;
+$pink-d9: #d99090;
 
 // Retina
 //---------------------------------

@@ -1,0 +1,90 @@
+.footer {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background-color: $light-purple;
+	padding: vw(35) vw(100);
+
+	@include max(md) {
+		flex-direction: column-reverse;
+		padding: vws(24) vws(100);
+	}
+
+	&__left {
+		font-family: $fontCentury;
+		font-size: vw(30);
+		text-transform: uppercase;
+		color: $white;
+
+		@include max(md) {
+			font-size: vws(18);
+		}
+	}
+
+	&__right {
+		display: flex;
+		align-items: center;
+
+		@include max(md) {
+			flex-direction: column;
+		}
+
+		span {
+			font-family: $fontCentury;
+			font-size: vw(30);
+			text-transform: uppercase;
+			color: $white;
+			padding-right: vw(50);
+
+			@include max(md) {
+				font-size: vws(18);
+			}
+		}
+	}
+
+	&__socials {
+		display: flex;
+		align-items: center;
+
+		@include max(md) {
+			margin-top: vws(13);
+			margin-bottom: vws(10);
+		}
+
+		a {
+			+ a {
+				margin-left: vw(17);
+
+				@include max(md) {
+					margin-left: vws(18);
+				}
+			}
+
+			@include hover {
+				svg {
+					opacity: 0.8;
+				}
+			}
+		}
+
+		svg {
+			width: vw(60);
+			height: vw(60);
+			fill: $white;
+			transition: opacity 0.3s ease;
+
+			@include max(md) {
+				width: vws(40);
+				height: vws(40);
+			}
+		}
+	}
+
+	&--gray {
+		background-color: $gray-a5;
+	}
+
+	&--pink {
+		background-color: $pink;
+	}
+}

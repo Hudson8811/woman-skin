@@ -1,0 +1,85 @@
+.test {
+	position: relative;
+	min-height: vw(1024);
+	height: 100vh;
+	background-repeat: no-repeat;
+	background-position: bottom right;
+	background-size: cover;
+
+	@include max(md) {
+		overflow-y: auto;
+		overflow-x: hidden;
+	}
+
+	&.anim-title {
+		.test__start {
+			opacity: 1;
+			transform: translate(-50%, -50%);
+
+			@include max(md) {
+				transform: translate(-50%, 0);
+			}
+		}
+	}
+
+	&.anim-balls-zoom {
+		.test-ball {
+			transform: scale(1);
+		}
+	}
+
+	&.anim-balls-text {
+		.test-ball {
+			pointer-events: auto;
+
+			p {
+				opacity: 1;
+				transform: translate(-50%, -50%);
+			}
+		}
+	}
+
+	&__start {
+		max-width: vw(920);
+		position: relative;
+		top: 50%;
+		left: 50%;
+		z-index: 20;
+		pointer-events: none;
+		opacity: 0;
+		transform: translate(-50%, -20%);
+		transition: opacity 0.7s ease 2.2s, transform 0.7s ease 2.2s;
+
+		@include max(md) {
+			max-width: 100%;
+			top: vws(50);
+			padding: 0 vws(45);
+			transform: translate(-50%, 0);
+		}
+
+		p {
+			&:first-child {
+				font-size: vw(80);
+				line-height: vw(80);
+
+				@include max(md) {
+					font-size: vws(40);
+					line-height: vws(40);
+				}
+			}
+
+			&:last-child {
+				font-size: vw(22);
+				line-height: vw(28);
+				font-style: italic;
+				margin-top: vw(20);
+
+				@include max(md) {
+					font-size: vws(20);
+					line-height: vws(26);
+					margin-top: vws(10);
+				}
+			}
+		}
+	}
+}

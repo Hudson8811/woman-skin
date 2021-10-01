@@ -28,3 +28,13 @@
   font-weight: 400;
   font-display: swap;
 }
+
+@font-face {
+  font-family: "CenturyGothic";
+  src: local("CenturyGothic"), local("CenturyGothic"),
+  url("../fonts/CenturyGothic.woff") format("woff"),
+  url("../fonts/CenturyGothic.ttf") format("truetype"),
+  url("../fonts/CenturyGothic.eot") format("opentype");
+  font-weight: 400;
+  font-display: swap;
+}
