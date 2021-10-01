@@ -134,7 +134,7 @@ $(window).on('load', function() {
 	timer = setTimeout(function () {
 		playAnim();
 		isLocked = false;
-	}, 10000);
+	}, 50000);
 
 
 	lock = 0;
