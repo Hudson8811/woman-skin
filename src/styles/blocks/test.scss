@@ -27,6 +27,8 @@
 	}
 
 	&.anim-balls-zoom {
+		margin-right: 0 !important;
+
 		.test-ball {
 			transform: scale(1);
 		}
