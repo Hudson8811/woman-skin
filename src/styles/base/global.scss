@@ -9,6 +9,10 @@ body {
 	min-height: 100vh;
 	font-family: $mainFont;
 	color: $black;
+
+	&:not(.body-scroll-lock) .section-2 {
+		margin-right: 0 !important;
+	}
 }
 
 main {
