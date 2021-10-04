@@ -43,6 +43,14 @@
 		}
 	}
 
+	&__bg {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+	}
+
 	&__start {
 		display: flex;
 		align-items: center;
@@ -105,6 +113,7 @@
 		position: relative;
 		top: 96%;
 		left: 50%;
+		z-index: 100;
 		transform: translateX(-50%);
 		animation: arrow-move 3s linear infinite;
 
@@ -121,29 +130,123 @@
 }
 
 
-.section-1{
-  transform: translateY(0);
-  transition: transform 1s;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 111;
-  width: 100%;
-  &.top{
-	transform: translateY(-100%);
-  }
-}
-.section-2{
-  transform: translateY(100vh);
-  transition: transform 1s;
-  position: relative;
-  &.top{
+.section-1 {
 	transform: translateY(0);
-  }
+	transition: transform 1s;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 111;
+	width: 100%;
+
+	&.top {
+		transform: translateY(-100%);
+	}
+
+	.test-ball {
+		animation-duration: 10s;
+		animation-timing-function: linear;
+		animation-iteration-count: infinite;
+
+		@include max(md) {
+			display: block !important;
+			animation: none;
+		}
+
+		&--1 {
+			animation-name: move-to-top-right;
+		}
+
+		&--2 {
+			animation-name: move-to-bottom-left;
+		}
+
+		&--3 {
+			animation-name: move-to-down-up;
+		}
+
+		&--4 {
+			animation-name: move-to-top-right;
+		}
+
+		&--5 {
+			animation-name: move-to-bottom-left;
+		}
+
+		&--6 {
+			animation-name: move-to-down-up;
+		}
+
+		&--7 {
+			animation-name: move-to-top-right;
+		}
+
+		&--8 {
+			animation-name: move-to-bottom-left;
+		}
+
+		&--9 {
+			animation-name: move-to-down-up;
+		}
+
+		&--10 {
+			animation-name: move-to-top-right;
+		}
+
+		&--11 {
+			animation-name: move-to-bottom-left;
+		}
+
+		&--12 {
+			animation-name: move-to-down-up;
+		}
+
+		&--13 {
+			animation-name: move-to-top-right;
+		}
+
+		&--14 {
+			animation-name: move-to-bottom-left;
+		}
+
+		&--15 {
+			animation-name: move-to-down-up;
+		}
+
+		&--16 {
+			animation-name: move-to-top-right;
+		}
+
+		&--17 {
+			animation-name: move-to-bottom-left;
+		}
+
+		&--18 {
+			animation-name: move-to-down-up;
+		}
+
+		&--19 {
+			animation-name: move-to-top-right;
+		}
+
+		&--20 {
+			animation-name: move-to-bottom-left;
+		}
+	}
 }
 
-body{
-  &.blocked{
-	overflow: hidden;
-  }
+.section-2 {
+	transform: translateY(100vh);
+	transition: transform 1s;
+	position: relative;
+
+	&.top {
+		transform: translateY(0);
+	}
+}
+
+body {
+	&.blocked {
+		overflow: hidden;
+	}
 }

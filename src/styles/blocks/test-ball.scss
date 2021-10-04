@@ -29,7 +29,7 @@
 		display: none;
 
 		&:checked + p + img {
-			border: 2px solid;
+			border: 2px solid $gray-a5;
 		}
 	}
 

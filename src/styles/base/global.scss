@@ -77,6 +77,7 @@ textarea {
 
 	@include max(md) {
 		display: none;
+		animation: none !important;
 	}
 
 	&--mobile {
@@ -84,6 +85,7 @@ textarea {
 
 		@include max(md) {
 			display: block;
+			animation: none !important;
 		}
 	}
 
@@ -92,6 +94,7 @@ textarea {
 		height: vw(252);
 		top: vw(50);
 		left: vw(94);
+		animation: move-to-top-right 10s linear infinite;
 
 		@include max(md) {
 			display: block;
@@ -117,6 +120,7 @@ textarea {
 		top: 24.5%;
 		left: 14%;
 		z-index: 1;
+		animation: move-to-bottom-left 10s linear infinite;
 	}
 
 	&--4 {
@@ -124,6 +128,7 @@ textarea {
 		height: vw(342);
 		top: 47.4%;
 		left: 0;
+		animation: move-to-down-up 10s linear infinite;
 	}
 
 	&--5 {
@@ -131,6 +136,7 @@ textarea {
 		height: vw(223);
 		top: 47.4%;
 		right: vw(89);
+		animation: move-to-down-up 10s linear infinite;
 	}
 
 	&--6 {
@@ -138,6 +144,7 @@ textarea {
 		height: vw(219);
 		bottom: 8.7%;
 		left: vw(50);
+		animation: move-to-up-down 10s linear infinite;
 
 		@include max(md) {
 			display: block;
@@ -153,6 +160,7 @@ textarea {
 		height: vw(110);
 		bottom: 11.4%;
 		right: 28.7%;
+		animation: move-to-up-down 10s linear infinite;
 
 		@include max(md) {
 			width: vws(60);

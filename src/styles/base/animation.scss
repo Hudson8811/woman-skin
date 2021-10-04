@@ -19,3 +19,59 @@
 		transform: translateY(0);
 	}
 }
+
+@keyframes move-to-top-right {
+	0% {
+		transform: translate(0);
+	}
+
+	50% {
+		transform: translate(-180px, 120px);
+	}
+
+	100% {
+		transform: translate(0);
+	}
+}
+
+@keyframes move-to-bottom-left {
+	0% {
+		transform: translate(0);
+	}
+
+	50% {
+		transform: translate(-180px, 120px);
+	}
+
+	100% {
+		transform: translate(0);
+	}
+}
+
+@keyframes move-to-up-down {
+	0% {
+		transform: translate(0);
+	}
+
+	50% {
+		transform: translate(0, 120px);
+	}
+
+	100% {
+		transform: translate(0);
+	}
+}
+
+@keyframes move-to-down-up {
+	0% {
+		transform: translate(0);
+	}
+
+	50% {
+		transform: translate(0, -120px);
+	}
+
+	100% {
+		transform: translate(0);
+	}
+}

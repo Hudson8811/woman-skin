@@ -1,4 +1,6 @@
 $(window).on('load', function() {
+	new WOW().init();
+
 	history.scrollRestoration = "manual"
 
 	window.scrollTo({ top: 0 });
@@ -153,7 +155,7 @@ $(window).on('load', function() {
 			$('body').addClass('body-scroll-lock');
 			$('.section-1').removeClass('top');
 			$('.section-2').removeClass('top');
-			$('.test').removeClass('anim-balls-zoom anim-balls-text');
+			$('.section-2').removeClass('anim-balls-zoom anim-balls-text');
 			setTimeout(function () {
 				$('.section-1').addClass('anim-title');
 			}, 800);
@@ -171,7 +173,7 @@ $(window).on('load', function() {
 		$('.section-1').removeClass('anim-title');
 
 		setTimeout(function (){
-			$('.test').addClass('anim-balls-zoom');
+			$('.section-2').addClass('anim-balls-zoom');
 		},800);
 
 		setTimeout(function (){
@@ -254,9 +256,6 @@ $(window).on('load', function() {
 
 			$('.results[data-result="' + keyVal + '"]').fadeIn(300);
 			$('.test').hide();
-
-			console.log(max);
-			console.log(res);
 		}
 	});
 });

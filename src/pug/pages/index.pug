@@ -7,7 +7,28 @@ block vars
 		};
 
 block main
-	section.test.section-1(style='background-image: url("images/pattern.png")')
+	section.test.section-1.anim-balls-zoom
+		.test__bg
+			img.test-ball.test-ball--1(src="images/test/red.png", srcset="images/test/red@2x.png 2x", alt="")
+			img.test-ball.test-ball--2(src="images/test/blue.png", srcset="images/test/blue@2x.png 2x", alt="")
+			img.test-ball.test-ball--3(src="images/test/gray.png", srcset="images/test/gray@2x.png 2x", alt="")
+			img.test-ball.test-ball--4(src="images/test/blue.png", srcset="images/test/blue@2x.png 2x", alt="")
+			img.test-ball.test-ball--5(src="images/test/gray.png", srcset="images/test/gray@2x.png 2x", alt="")
+			img.test-ball.test-ball--6(src="images/test/red.png", srcset="images/test/red@2x.png 2x", alt="")
+			img.test-ball.test-ball--7(src="images/test/gray.png", srcset="images/test/gray@2x.png 2x", alt="")
+			img.test-ball.test-ball--8(src="images/test/blue.png", srcset="images/test/blue@2x.png 2x", alt="")
+			img.test-ball.test-ball--9(src="images/test/gray.png", srcset="images/test/gray@2x.png 2x", alt="")
+			img.test-ball.test-ball--10(src="images/test/red.png", srcset="images/test/red@2x.png 2x", alt="")
+			img.test-ball.test-ball--11(src="images/test/red.png", srcset="images/test/red@2x.png 2x", alt="")
+			img.test-ball.test-ball--12(src="images/test/gray.png", srcset="images/test/gray@2x.png 2x", alt="")
+			img.test-ball.test-ball--13(src="images/test/blue.png", srcset="images/test/blue@2x.png 2x", alt="")
+			img.test-ball.test-ball--14(src="images/test/red.png", srcset="images/test/red@2x.png 2x", alt="")
+			img.test-ball.test-ball--15(src="images/test/gray.png", srcset="images/test/gray@2x.png 2x", alt="")
+			img.test-ball.test-ball--16(src="images/test/red.png", srcset="images/test/red@2x.png 2x", alt="")
+			img.test-ball.test-ball--17(src="images/test/red.png", srcset="images/test/red@2x.png 2x", alt="")
+			img.test-ball.test-ball--18(src="images/test/blue.png", srcset="images/test/blue@2x.png 2x", alt="")
+			img.test-ball.test-ball--19(src="images/test/blue.png", srcset="images/test/blue@2x.png 2x", alt="")
+			img.test-ball.test-ball--20(src="images/test/gray.png", srcset="images/test/gray@2x.png 2x", alt="")
 		.test__start
 			.test__start-wrapper
 				p [Skin-translate]: переводчик с языка кожи
@@ -110,14 +131,14 @@ block main
 		img.ball.ball--9(src="images/results/ball-9.png", srcset="images/results/ball-9@2x.png 2x", alt="")
 		.container.container--small.results__container
 			.results__top
-				p Больше вариантов А
-				p Что-то замедляет обновление вашей кожи и провоцирует закупорку пор.
+				p.wow.slideInLeft Больше вариантов А
+				p.wow.slideInLeft Что-то замедляет обновление вашей кожи и провоцирует закупорку пор.
 					|  В Т-зоне появляются комедоны, микробиом эпидермиса нарушен и не справляется со своей
 					|  основной функцией — защитой от размножения условно патогенных бактерий и внешних микроповреждений.
-			.results__title Дополните уход отшелушивающими средствами и откажитесь от мощных очищающих
+			.results__title.wow.slideInLeft Дополните уход отшелушивающими средствами и откажитесь от мощных очищающих
 				|  продуктов для умывания. Жирная и комбинированная кожа нуждается в интенсивном
 				|  очищении без пересушивания — это правило №1.
-			.results__block.results__block--1
+			.results__block.results__block--1.wow.slideInRight
 				.results__left
 					.results__title Отшелушивание
 					.results__text Пусть отшелушивание будет мягким, без абразивных частиц и трения. Так действует система <a href="https://www.nuskin.com/ru_RU/products/nuskin/shop_all_products/ageloc-boost-system/ageloc-boost-system-skin-brightening-benefits.html" target="_blank">age LOC Boost</a>.
@@ -127,7 +148,7 @@ block main
 					img.ball.ball--mobile.ball--7(src="images/results/ball-7.png", srcset="images/results/ball-7@2x.png 2x", alt="")
 					img.results__image(src="images/results/1.png", srcset="images/results/1@2x.png 2x", width="163", height="163", alt="")
 					p.caption Комплекс ageLOC Boost
-			.results__block.results__block--reverse.results__block--2
+			.results__block.results__block--reverse.results__block--2.wow.slideInLeft
 				.results__left
 					.results__title Для ритуала деликатного очищения подойдет гель <a href="https://www.nuskin.com/content/nuskin/ru_RU/products/product.40001781.html" target="_blank">Nutricentials To Be Clear от Nu Skin.</a>
 					.results__text В ладонях он превращается в нежную пенку и эффективно удаляет загрязнения, блокирующие поры,
@@ -138,7 +159,7 @@ block main
 				.results__right
 					img.results__image(src="images/results/2.png", srcset="images/results/2@2x.png 2x", width="153", height="261", alt="")
 					p.caption Гель Nutricentials <br> To Be Clear
-			.results__block.results__block--3
+			.results__block.results__block--3.wow.slideInRight
 				.results__text Повышенную выработку себума тоже возможно нормализовать без пересушивания
 					|  В увлажняющем и удивительно комфортном креме с гелевой текстурой <a href="https://www.nuskin.com/content/nuskin/ru_RU/products/product.40001787.html" target="_blank">Nutricentials Thirst Fix</a> об этом позаботится экстракт
 					|  лекарственного растения кошачий ус.
@@ -173,13 +194,13 @@ block main
 		img.ball.ball--9(src="images/results/ball-9.png", srcset="images/results/ball-9@2x.png 2x", alt="")
 		.container.container--small.results__container
 			.results__top
-				p Больше вариантов Б
-				p Кожа отвечает на оксидативный стресс, агрессию внешней среды и ультрафиолет единственным известным
+				p.wow.slideInLeft Больше вариантов Б
+				p.wow.slideInLeft Кожа отвечает на оксидативный стресс, агрессию внешней среды и ультрафиолет единственным известным
 					|  ей способом — преждевременным старением. Замедлите течение времени полноценным правильным питанием,
 					|  прогулками на свежем воздухе. А еще ваша кожа будет вам безмерно благодарна за средства ухода с
 					|  увлажняющими, осветляющими, питательными и антиоксидантными компонентами.
-			.results__title Уже существующие пигментные пятна легко поддаются коррекции с комплексным уходом <a href="https://www.nuskin.com/ru_RU/products/nuskin/shop_all_products/ageloc-boost-system/ageloc-boost-system-skin-brightening-benefits.html" target="_blank">ageLOC Boost.</a>
-			.results__block.results__block--1
+			.results__title.wow.slideInLeft Уже существующие пигментные пятна легко поддаются коррекции с комплексным уходом <a href="https://www.nuskin.com/ru_RU/products/nuskin/shop_all_products/ageloc-boost-system/ageloc-boost-system-skin-brightening-benefits.html" target="_blank">ageLOC Boost.</a>
+			.results__block.results__block--1.wow.slideInRight
 				.results__left
 					.results__text Сыворотка содержит экстракт морского нарцисса, витамин С и ниацинамид, снискавшие славу одних
 						|  из лучших косметических активов против пигментных пятен любой природы, в том числе возрастных и вызванных
@@ -192,8 +213,8 @@ block main
 					img.results__image(src="images/results/3.png", srcset="images/results/3@2x.png 2x", alt="")
 					p.caption Комплекс ageLOC Boost
 
-			.results__title.results__title--pl Антивозрастной уход доведут до совершенства средства гаммы Nutricentials.
-			.results__block.results__block--reverse.results__block--2
+			.results__title.results__title--pl.wow.slideInLeft Антивозрастной уход доведут до совершенства средства гаммы Nutricentials.
+			.results__block.results__block--reverse.results__block--2.wow.slideInLeft
 				.results__left
 					.results__text Крем для лица <a href="https://www.nuskin.com/content/nuskin/ru_RU/products/product.40001788.html" target="_blank">Nutricentials Dew All Day</a> повысит устойчивость кожи к внешним факторам старения,
 						|  поддержит оптимальный водный баланс до 24 часов и не забьет при этом поры, поскольку составы всех продуктов
@@ -205,7 +226,7 @@ block main
 				.results__right
 					img.results__image(src="images/results/4.png", srcset="images/results/4@2x.png 2x", alt="")
 					p.caption Крем Nutricentials <br> Dew All Day
-			.results__block.results__block--3
+			.results__block.results__block--3.wow.slideInRight
 				.results__left
 					.results__title «Симптомы» усталости и возрастных изменений вокруг глаз требуют особого, системного подхода.
 					.results__text Например, с комплексом <a href="https://www.nuskin.com/content/nuskin/ru_RU/products/product.40139350.html" target="_blank">ageLOC LumiSpa.</a> Массажное устройство в сочетании с мягкой силиконовой
@@ -242,12 +263,12 @@ block main
 		img.ball.ball--9(src="images/results/ball-9.png", srcset="images/results/ball-9@2x.png 2x", alt="")
 		.container.container--small.results__container
 			.results__top
-				p Больше вариантов В
-				p Даже если еще недавно ваша кожа была нормальной, сейчас она скорее сухая и чувствительная, о чем
+				p.wow.slideInLeft Больше вариантов В
+				p.wow.slideInLeft Даже если еще недавно ваша кожа была нормальной, сейчас она скорее сухая и чувствительная, о чем
 					|  неустанно сигнализирует шершавостью, неравномерным цветом с отчетливыми покраснениями и дискомфортом
 					|  после умывания. Питательный уход восполнит гидролипидный барьер на поверхности кожи, ответственный за ее
 					|  способность удерживать живительную влагу. И совсем не помешает экстремальное увлажнение.
-			.results__block.results__block--1
+			.results__block.results__block--1.wow.slideInRight
 				.results__left
 					.results__title Увлажнение
 					.results__text За мощным увлажнением рекомендуем обратиться к комплексу <a href="https://www.nuskin.com/ru_RU/products/nuskin/shop_all_products/ageloc-boost-system/ageloc-boost-system-skin-brightening-benefits.html" target="_blank">ageLOC Boost.</a> Микротоки сделают кожу более
@@ -259,7 +280,7 @@ block main
 					img.results__image(src="images/results/5.png", srcset="images/results/5@2x.png 2x", alt="")
 					p.caption Комплекс ageLOC Boost
 
-			.results__block.results__block--2
+			.results__block.results__block--2.wow.slideInLeft
 				.results__left
 					.results__title Но на этом рано ставить точку, поскольку увлажнения и питания не бывает слишком много. Вам подойдут как
 						|  минимум три средства ухода из гаммы Nutricentials от Nu Skin.
@@ -275,7 +296,7 @@ block main
 							span Шаг третий — интенсивное и пролонгированное увлажнение на основе крема <a href="https://www.nuskin.com/content/nuskin/ru_RU/products/product.40001793.html" target="_blank">Moisturize Me.</a> Несмотря на роскошную густую текстуру,
 								|  крем не оставляет жирного финиша и ощущения липкости — только свежесть и здоровое сияние кожи.
 
-			.results__block.results__block--3
+			.results__block.results__block--3.wow.slideInRight
 				.results__left
 					.results__title А в те дни, когда кожа сама не знает, что ей сейчас нужно — больше увлажнения или больше
 						|  питания, — помогите ей адаптироваться к изменению температурного режима.
