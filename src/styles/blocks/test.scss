@@ -12,7 +12,7 @@
 
 	&--auto-height {
 		min-height: vw(1024);
-		height: unset;
+		height: 100vh;
 
 		@include max(md) {
 			min-height: vws(667);
