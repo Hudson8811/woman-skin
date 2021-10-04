@@ -173,6 +173,7 @@
 
 		&--5 {
 			animation-name: move-to-bottom-left;
+			z-index: 2;
 		}
 
 		&--6 {
@@ -186,7 +187,7 @@
 		}
 
 		&--8 {
-			animation-name: move-to-bottom-left;
+			animation-name: move-to-down-up;
 			animation-delay: 1s;
 		}
 
@@ -195,7 +196,7 @@
 		}
 
 		&--10 {
-			animation-name: move-to-top-right;
+			animation-name: move-to-up-down;
 		}
 
 		&--11 {
@@ -228,6 +229,8 @@
 
 		&--17 {
 			animation-name: move-to-bottom-left;
+			z-index: 3;
+			animation-delay: 2s;
 		}
 
 		&--18 {
