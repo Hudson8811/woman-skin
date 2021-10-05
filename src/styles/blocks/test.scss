@@ -87,6 +87,11 @@
 				line-height: vw(80);
 
 				@include max(md) {
+					font-size: vws(20);
+					line-height: vws(20);
+				}
+
+				@include max(sm) {
 					font-size: vws(40);
 					line-height: vws(40);
 				}
@@ -99,9 +104,14 @@
 				margin-top: vw(20);
 
 				@include max(md) {
+					font-size: vws(10);
+					line-height: vws(16);
+					margin-top: vws(10);
+				}
+
+				@include max(sm) {
 					font-size: vws(20);
 					line-height: vws(26);
-					margin-top: vws(10);
 				}
 			}
 		}
@@ -111,7 +121,7 @@
 		width: vw(20);
 		height: vw(20);
 		position: relative;
-		top: 96%;
+		top: 90%;
 		left: 50%;
 		z-index: 100;
 		transform: translateX(-50%);
@@ -125,6 +135,28 @@
 		svg {
 			width: 100%;
 			height: 100%;
+		}
+	}
+
+	&__return-btn {
+		max-width: vw(210);
+		padding: vw(13) vw(15);
+		position: absolute;
+		top: 5%;
+		left: 5%;
+		z-index: 2;
+		font-size: vw(13);
+
+		@include max(md) {
+			max-width: vws(210);
+			padding: vws(8) vws(11);
+			font-size: vws(7);
+		}
+
+		@include max(sm) {
+			max-width: vws(210);
+			padding: vws(7) vws(9);
+			font-size: vws(9);
 		}
 	}
 }

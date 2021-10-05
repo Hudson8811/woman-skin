@@ -152,7 +152,7 @@ $(window).on('load', function() {
 			playAnim();
 		} else  if (up && lock == 0 && scrollTop <= 25){
 			lock = 1;
-			$('body').addClass('body-scroll-lock');
+
 			$('.section-1').removeClass('top');
 			$('.section-2').removeClass('top');
 			$('.section-2').removeClass('anim-balls-zoom anim-balls-text');
@@ -163,6 +163,10 @@ $(window).on('load', function() {
 			setTimeout(function (){
 				lock = 0;
 			},1000);
+
+			if (!$('.results').is(':visible')) {
+				$('body').addClass('body-scroll-lock');
+			}
 		}
 	}, 300);
 
@@ -213,9 +217,7 @@ $(window).on('load', function() {
 		$('.results').fadeOut(300);
 		$('.test').fadeIn(300);
 
-		$('body, html').animate({
-			scrollTop: $('#start').offset().top
-		}, 100);
+		window.scrollTo({ top: 0 });
 	});
 
 	inputs.change(function () {

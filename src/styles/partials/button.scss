@@ -17,4 +17,47 @@
 		background-color: $pink;
 		color: $white;
 	}
+
+	&--fill {
+		background-color: $pink;
+		color: $white;
+
+		@include hover {
+			background-color: rgba($pink, 0.8);
+			color: $white;
+		}
+	}
+
+	&--purple {
+		background-color: $light-purple;
+		border-color: $light-purple;
+		color: $white;
+
+		@include hover {
+			background-color: rgba($light-purple, 0.8);
+			color: $white;
+		}
+	}
+
+	&--gray {
+		background-color: $gray-a5;
+		border-color: $gray-a5;
+		color: $white;
+
+		@include hover {
+			background-color: rgba($gray-a5, 0.8);
+			color: $white;
+		}
+	}
+
+	&--pink {
+		background-color: $pink;
+		border-color: $pink;
+		color: $white;
+
+		@include hover {
+			background-color: rgba($pink, 0.8);
+			color: $white;
+		}
+	}
 }
