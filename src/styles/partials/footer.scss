@@ -2,12 +2,12 @@
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	background-color: $light-purple;
+	background-color: $black;
 	padding: vw(35) vw(100);
 
 	@include max(md) {
 		flex-direction: column-reverse;
-		padding: vws(24) vws(100);
+		padding: vws(24) vws(20);
 	}
 
 	&__left {
@@ -78,13 +78,5 @@
 				height: vws(40);
 			}
 		}
-	}
-
-	&--gray {
-		background-color: $gray-a5;
-	}
-
-	&--pink {
-		background-color: $pink;
 	}
 }
