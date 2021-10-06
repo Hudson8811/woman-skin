@@ -32,8 +32,10 @@ block main
 			img.test-ball.test-ball--20(src="images/test/gray.png", srcset="images/test/gray@2x.png 2x", alt="")
 		.test__start
 			.test__start-wrapper
-				p [Skin-translate]: переводчик с языка кожи
-				p Выберите пять особенностей вашей кожи в моменте — ведь завтра
+				p.title [Skin-translate]: переводчик с языка кожи
+				p.desk <span>Выберите пять особенностей вашей кожи в моменте</span> — ведь завтра
+					|  ее желания могут измениться — и получите рекомендацию от Nu Skin.
+				p.mobile <span>Выберите пять особенностей вашей</span> <span>кожи в моменте</span> — ведь завтра
 					|  ее желания могут измениться — и получите рекомендацию от Nu Skin.
 		.test__arrow
 			+icon('arrow-down')
@@ -226,7 +228,7 @@ block main
 						|  появление пигментных пятен.
 				.results__right
 					img.results__image(src="images/results/4.png", srcset="images/results/4@2x.png 2x", alt="")
-					p.caption Крем Nutricentials <br> Dew All Day
+					p.caption Day Dream <br> protective lotion
 			.results__block.results__block--3.wow.slideInRight
 				.results__left
 					.results__title «Симптомы» усталости и возрастных изменений вокруг глаз требуют особого, системного подхода.

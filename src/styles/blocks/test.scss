@@ -11,7 +11,7 @@
 	}
 
 	&--auto-height {
-		min-height: vw(1024);
+		min-height: vw(900);
 		height: 100vh;
 
 		@include max(md) {
@@ -78,11 +78,11 @@
 		@include max(md) {
 			max-width: 100%;
 			width: 100%;
-			padding: 0 vws(45);
+			padding: 0 vws(24);
 		}
 
 		p {
-			&:first-child {
+			&.title {
 				font-size: vw(80);
 				line-height: vw(80);
 
@@ -97,7 +97,8 @@
 				}
 			}
 
-			&:last-child {
+			&.desk,
+			&.mobile {
 				font-size: vw(22);
 				line-height: vw(28);
 				font-style: italic;
@@ -110,8 +111,32 @@
 				}
 
 				@include max(sm) {
-					font-size: vws(20);
-					line-height: vws(26);
+					display: none;
+				}
+			}
+
+			&.mobile {
+				display: none;
+				font-size: vws(20);
+				line-height: vws(29);
+
+				@include max(sm) {
+					display: block;
+				}
+			}
+
+			span {
+				display: inline;
+				background-color: $pink;
+				padding: vw(5) vw(14);
+				margin-left: vw(-14);
+				border-radius: vw(60);
+				color: $white;
+
+				@include max(sm) {
+					padding: vws(1) vws(14);
+					margin-left: vws(-14);
+					border-radius: vws(60);
 				}
 			}
 		}
