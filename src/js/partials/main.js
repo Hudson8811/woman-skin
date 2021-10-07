@@ -199,7 +199,6 @@ $(window).on('load', function() {
 				b: 0,
 				c: 0
 			},
-			max = 0,
 			keyVal,
 			restartBtn = $('.results__restart');
 
@@ -215,6 +214,11 @@ $(window).on('load', function() {
 		};
 
 		$('.results').fadeOut(300);
+
+		setTimeout(function () {
+			$('.results').removeAttr('style');
+		}, 2000);
+
 		$('.test').fadeIn(300);
 
 		window.scrollTo({ top: 0 });
@@ -242,6 +246,8 @@ $(window).on('load', function() {
 						break;
 				}
 			});
+
+			var max = 0;
 
 			for (var key in res) {
 				var temp = res[key];
